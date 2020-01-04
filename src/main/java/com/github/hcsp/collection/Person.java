@@ -55,7 +55,7 @@ public class Person {
 
     @Override
     public int hashCode() {
-        int result = 1111;
+        int result = 1;
         result = 31 * result + (id != null ? id.hashCode() : 0);
         return result;
     }
