@@ -1,5 +1,7 @@
 package com.github.hcsp.collection;
 
+import java.util.Objects;
+
 public class Person {
     /** 身份证号 */
     private final String id;
@@ -47,8 +49,9 @@ public class Person {
         return id.equals(person.id);
     }
 
+
     @Override
     public int hashCode() {
-        return Integer.parseInt(this.id);
+        return Objects.hash(id,age);
     }
 }
