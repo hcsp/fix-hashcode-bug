@@ -38,20 +38,17 @@ public class Person {
     public boolean equals(Object o) {
         if (this == o) {
             return true;
-        }
+}
         if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+                return false;
+                }
 
-        Person person = (Person) o;
-        return id.equals(person.id);
-    }
+                Person person = (Person) o;
+                return id.equals(person.id);
+                }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + age;
-        return result;
+        return id.hashCode();
     }
 }
