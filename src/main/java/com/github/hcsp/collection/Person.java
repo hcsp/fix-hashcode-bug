@@ -1,7 +1,5 @@
 package com.github.hcsp.collection;
 
-import java.util.Collection;
-
 public class Person {
     /** 身份证号 */
     private final String id;
