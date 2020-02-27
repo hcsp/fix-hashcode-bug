@@ -1,7 +1,6 @@
 package com.github.hcsp.collection;
 
-public class
-Person {
+public class Person {
     /**
      * 身份证号
      */
