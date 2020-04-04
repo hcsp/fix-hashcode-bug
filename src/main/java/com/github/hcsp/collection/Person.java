@@ -44,14 +44,13 @@ public class Person {
         }
 
         Person person = (Person) o;
+
         return id.equals(person.id);
     }
 
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + age;
         return result;
     }
 }
