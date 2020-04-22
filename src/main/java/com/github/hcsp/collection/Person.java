@@ -1,13 +1,17 @@
 package com.github.hcsp.collection;
 
-import java.util.HashSet;
-
 public class Person {
-    /** 身份证号 */
+    /**
+     * 身份证号
+     */
     private final String id;
-    /** 姓名 */
+    /**
+     * 姓名
+     */
     private String name;
-    /** 年龄 */
+    /**
+     * 年龄
+     */
     private int age;
 
     public Person(String id) {
@@ -51,7 +55,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 }
