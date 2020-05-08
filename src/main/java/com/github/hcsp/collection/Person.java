@@ -65,6 +65,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return id != null ? id.hashCode() : 0;
     }
 }
