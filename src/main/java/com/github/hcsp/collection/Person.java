@@ -1,6 +1,8 @@
 package com.github.hcsp.collection;
 
-public class Person {
+import java.util.Objects;
+
+public class Person<equals> {
     /** 身份证号 */
     private final String id;
     /** 姓名 */
@@ -34,24 +36,37 @@ public class Person {
         this.age = age;
     }
 
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) {
+//            return true;
+//        }
+//        if (o == null || getClass() != o.getClass()) {
+//            return false;
+//        }
+//
+//        Person person = (Person) o;
+//        return id.equals(person.id);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = id != null ? id.hashCode() : 0;
+//        result = 31 * result + (name != null ? name.hashCode() : 0);
+//        result = 31 * result + age;
+//        return result;
+//    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        Person person = (Person) o;
-        return id.equals(person.id);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person<?> person = (Person<?>) o;
+        return Objects.equals(id, person.id);
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + age;
-        return result;
+        return Objects.hash(id);
     }
 }
