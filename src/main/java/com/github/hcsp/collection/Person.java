@@ -1,6 +1,7 @@
 package com.github.hcsp.collection;
 
-public class Person {
+
+public class Person<equals> {
     /** 身份证号 */
     private final String id;
     /** 姓名 */
@@ -49,9 +50,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + age;
-        return result;
+        return id != null ? id.hashCode() : 0;
     }
 }
