@@ -1,6 +1,5 @@
 package com.github.hcsp.collection;
 
-import java.util.Objects;
 
 public class Person {
     /** 身份证号 */
