@@ -1,14 +1,6 @@
 package com.github.hcsp.collection;
 
-import java.util.HashSet;
-
 public class Person {
-    public static void main(String[] args) {
-        Person person = new Person("1");
-        HashSet<Person> newSet = new HashSet<>();
-        newSet.add(person);
-        System.out.println("newSet = " + newSet);
-    }
     /** 身份证号 */
     private final String id;
     /** 姓名 */
@@ -57,6 +49,9 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return id != null ? id.hashCode() : 0;
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        return result;
     }
 }
